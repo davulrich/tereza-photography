@@ -1,0 +1,29 @@
+// ********************
+// Header styles
+// ********************
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: $colorSecondary;
+    z-index: 1071; 
+
+    .navbar-brand, .site-description {
+        margin: 0;
+    }
+
+    .navbar-brand {
+        color: $colorMain;
+        font-family: $fontLogo;
+        font-size: 4rem;
+        line-height: 50px;
+    }
+
+    .navbar-nav {
+        .nav-link{
+            color: $colorMain;
+            font-family: $fontHeaders;
+            font-size: 1.8rem;
+        }
+    }
+}

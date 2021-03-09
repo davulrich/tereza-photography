@@ -1,0 +1,19 @@
+@mixin fullImage {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+@mixin transition15 {
+    transition: (all 0.15s ease-out 0s);
+}
+
+@mixin fontawesomeIcon {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}

@@ -1,0 +1,24 @@
+.heading-quote {
+    margin: 0;
+    padding: 10% 5%;
+    text-align: center;
+    font-size: 3rem;
+    background: $shadow;
+
+    &:before,
+    &:after {
+        font-size: 2rem;
+        @include fontawesomeIcon;
+    }
+
+    &:before {
+        margin-right: 10px;
+        content: "\f10d";
+    }
+
+    &:after {
+        margin-left: 10px;
+        content: "\f10e";
+    }
+
+}
