@@ -50,7 +50,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(wof|wof2|eot|ttf|otf)$/,
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
         exclude: /node_modules/,
         loader: "file-loader",
         options: {
