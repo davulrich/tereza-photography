@@ -3,27 +3,28 @@
 // ********************
 
 .navbar {
-    position: sticky;
-    top: 0;
-    background-color: $colorSecondary;
-    z-index: 1071; 
+  position: sticky;
+  top: 0;
+  background-color: $color-secondary;
+  z-index: 1071;
 
-    .navbar-brand, .site-description {
-        margin: 0;
-    }
+  .navbar-brand,
+  .site-description {
+    margin: 0;
+  }
 
-    .navbar-brand {
-        color: $colorMain;
-        font-family: $fontLogo;
-        font-size: 4rem;
-        line-height: 50px;
-    }
+  .navbar-brand {
+    color: $color-main;
+    font-family: $font-logo;
+    font-size: 4rem;
+    line-height: 50px;
+  }
 
-    .navbar-nav {
-        .nav-link{
-            color: $colorMain;
-            font-family: $fontHeaders;
-            font-size: 1.8rem;
-        }
+  .navbar-nav {
+    .nav-link {
+      color: $color-main;
+      font-family: $font-primary;
+      font-size: 1.8rem;
     }
+  }
 }

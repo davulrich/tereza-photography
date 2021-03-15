@@ -1,39 +1,38 @@
 .card {
-    margin: 1rem;
-    overflow: hidden;
+  margin: 1rem;
+  overflow: hidden;
 
-    &:hover {
-
-        .card-img {
-            transform: scale(1.5);
-        }
-
-        .card-img-overlay {
-            background: transparent;
-
-            .card-title {
-                color: transparent;   
-            }
-        }
-    }
-
+  &:hover {
     .card-img {
-        @include transition15;
+      transform: scale(1.5);
     }
 
     .card-img-overlay {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        background: hsla(0, 100%, 0%, .35);
-        @include transition15;
+      background: transparent;
 
-        .card-title {
-            color: $colorSecondary;
-            text-align: center;
-            font-size: 2.5rem;
-            @include transition15;
-        }
+      .card-title {
+        color: transparent;
+      }
     }
+  }
+
+  .card-img {
+    @include transition15;
+  }
+
+  .card-img-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background: hsla(0, 100%, 0%, 0.35);
+    @include transition15;
+
+    .card-title {
+      color: $color-secondary;
+      text-align: center;
+      font-size: 2.5rem;
+      @include transition15;
+    }
+  }
 }
