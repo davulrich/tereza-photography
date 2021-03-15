@@ -2,3 +2,6 @@ node_modules/
 
 # Test HTML files
 test.html
+
+# Ignore distribution folder
+assets/dist/
