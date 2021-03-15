@@ -13,6 +13,8 @@
 
 	</main><!-- #content -->
 
+	<!-- Hide footer on Home page -->
+	<?php if ( !is_front_page() ) : ?>
 	<footer class="site-footer container-fluid">
 		<div class="row">
 			<div class="site-info col-sm-6 text-center">
@@ -23,6 +25,7 @@
 			</div>
 		</div>
 	</footer>
+	<?php endif; ?>
 
 <?php wp_footer(); ?>
 

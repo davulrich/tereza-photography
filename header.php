@@ -22,30 +22,17 @@
 
 <body <?php body_class(); ?>>
 
+	<!-- Hide header on Home page -->
+	<?php if ( !is_front_page() ) : ?>
 	<header id="masthead" class="navbar navbar-expand-md navbar-light">
-		<?php
-		the_custom_logo();
-		if ( is_front_page() && is_home() ) :
-			?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="site-branding navbar-brand d-none d-lg-inline-block"><?php bloginfo( 'name' ); ?></a>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="site-branding navbar-brand d-inline-block d-lg-none"><?php echo 'TP'; ?></a>	
-			<?php
-		else :
-			?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="site-branding navbar-brand d-none d-lg-inline-block"><?php bloginfo( 'name' ); ?></a>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="site-branding navbar-brand d-inline-block d-lg-none"><?php echo 'TP'; ?></a>	
-			<?php
-		endif;
-		$terezaphotography_description = get_bloginfo( 'description', 'display' );
-		if ( $terezaphotography_description || is_customize_preview() ) :
-			?>
-			<p class="site-description"><?php echo $terezaphotography_description; /* WPCS: xss ok. */ ?></p>
-		<?php endif; ?>
+		<?php the_custom_logo(); ?>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="site-branding navbar-brand d-none d-lg-inline-block"><?php bloginfo( 'name' ); ?></a>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="site-branding navbar-brand d-inline-block d-lg-none"><?php echo 'TP'; ?></a>	
 
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar-colapse" aria-controls="bs-navbar-colapse" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-
-	</header><!-- #masthead -->
+	</header><!-- #masthead -->	
+	<?php endif; ?>
 
 	<main id="content" class="site-content">
