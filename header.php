@@ -21,7 +21,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
+
 	<header id="masthead" class="navbar navbar-expand-md navbar-light">
 		<?php
 		the_custom_logo();
