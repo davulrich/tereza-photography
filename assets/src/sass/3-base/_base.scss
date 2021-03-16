@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%; // now 1rem = 10px
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: $font-primary;
   color: var(--color-secondary);
