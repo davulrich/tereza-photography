@@ -138,8 +138,13 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-
 /**
  * Custom fields in settings
  */
 require get_template_directory() . '/inc/custom-fields.php';
+
+/**
+ * Load home page menu
+ * 
+ */
+require get_template_directory() . '/inc/home-page-menu.php';
