@@ -1,29 +1,100 @@
-.home-intro {
-  position: relative;
+.intro {
+  width: 100%;
+  max-width: 1200px;
   height: 100vh;
-  background: url(../../img/home.png);
-  @include fullImage;
-  background-position: bottom center;
-  background-attachment: fixed;
+  padding: 5rem 6rem;
+  margin: auto;
 
-  .overlay {
+  background-image: url(../../img/tp-bg.png);
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  color: var(--color-secondary);
+
+  &__logo {
+    margin-right: 2rem;
+
+    display: block;
+
+    font-family: $font-logo;
+    font-size: 12rem;
+    text-align: right;
+  }
+
+  &__logo-url {
+    display: block;
+
+    font-size: 1.8rem;
+    text-align: right;
+  }
+
+  &__heading {
+    font-size: 5rem;
+  }
+
+  &__nav {
+    margin-top: 3rem;
+
     display: flex;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    flex-direction: column;
+    justify-content: flex-end;
+    gap: 5rem;
+
+    font-size: 2rem;
+  }
+
+  &__nav-link {
+    position: relative;
+    &::after {
+      content: "";
+      height: 1rem;
+      width: 100%;
+
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+
+      border-bottom: 1px solid;
+      opacity: 0;
+      transform: scaleX(0);
+      transition: all 0.35s ease-in-out;
+    }
+    &:hover::after {
+      opacity: 1;
+      transform: scaleX(1);
+    }
+  }
+
+  &__social-icon {
+    width: 5.5rem;
+    height: 5.5rem;
+
+    border-radius: 50%;
+    border: 2px solid var(--color-main);
+
+    display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(0, 0, 0, 0.35);
 
-    .jumbotron {
-      border-radius: none;
-      max-width: 700px;
-      background-color: transparent;
-      color: $color-secondary;
-      text-shadow: $shadow 0px 0px 10px;
+    box-shadow: none;
+    transform: scale(0.9);
+    transition: all 0.3s ease-in-out;
+
+    // fix  webkit lagged animation
+    backface-visibility: hidden;
+
+    svg {
+      fill: var(--color-secondary);
+    }
+
+    &:hover {
+      border-color: var(--color-secondary);
+      transform: scale(1);
     }
   }
 }

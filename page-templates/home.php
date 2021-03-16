@@ -4,46 +4,23 @@
  */
 
 get_header(); ?>
-
-<section class="container-fluid home-intro w-100">
-    <div class="overlay">
-        <div class="jumbotron">
-            <div class="contrainer">
-                <h1 class="display-4"><?php echo esc_html( the_field('title' ) );?></h1>
-                <p class="lead"><?php echo esc_html( the_field('sub_title') );?></p>
-            </div>
-        </div>
-        <a id="more-info" class="btn btn-light text-center scroll-to" href="#portfolio">Pokračovat dále</a>
-    </div>
-</section>
-<section id="portfolio" class="container container-margin">
-    <div class="row">
-        <h1 class="site-title"><?php echo esc_html( the_field('gallery_title') );?></h1>   
+    
+    <div class="intro__logo-box">
+        <span class="intro__logo">TP</span>
+        <span class="intro__logo-url">terezephotography.com</span>
     </div>
 
-    <?php if ( have_rows('galleries') ) : ?>
-        <div class="row">
+    <div class="intro__content-box">
+        <h1 class="intro__heading"><?php echo esc_html( get_bloginfo('name') ); ?></h1>
 
-        <?php while ( have_rows('galleries') ) : the_row(); ?>
+        <?php echo load_menu_on_home_page('primary'); ?>
+    </div>
 
-            <div class="col-md-4 p-0">
-                <div class="card border-0 rounded-0">
-                    <a href="<?php echo esc_html( the_sub_field('page_link') );?>">
-                        <img src="<?php echo esc_html( get_sub_field('image')['url'] ) ;?>" alt="<?php echo esc_html( get_sub_field('image')['alt'] );?>" class="card-img border-0 rounded-0"/>
-                        <div class="card-img-overlay">
-                            <h5 class="card-title"><?php echo esc_html( the_sub_field('text_over_image') );?></h5>
-                        </div>
-                    </a>
-                </div>
-            </div> 
+    <div class="intro__social">
+        
+        <a class="intro__social-icon" href="https://instagram.com/terezpav" target="_blank"><?php echo file_get_contents(get_template_directory_uri() . '/assets/dist/img/icon-instagram.svg'); ?></a>
 
-        <?php endwhile; ?>
-
-        </div>
-
-    <?php endif; ?>
-   
-</section>
+    </div>
 
 <?php
 get_footer();
