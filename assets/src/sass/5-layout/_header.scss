@@ -5,7 +5,7 @@
 .navbar {
   position: sticky;
   top: 0;
-  background-color: $color-secondary;
+  background-color: var(--color-secondary);
   z-index: 1071;
 
   .navbar-brand,
@@ -14,7 +14,7 @@
   }
 
   .navbar-brand {
-    color: $color-main;
+    color: var(--color-main);
     font-family: $font-logo;
     font-size: 4rem;
     line-height: 50px;
@@ -22,7 +22,7 @@
 
   .navbar-nav {
     .nav-link {
-      color: $color-main;
+      color: var(--color-main);
       font-family: $font-primary;
       font-size: 1.8rem;
     }

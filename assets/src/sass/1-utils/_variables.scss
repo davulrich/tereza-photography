@@ -13,3 +13,11 @@ $shadow: #d0d0d0;
 
 $font-primary: "Raleway", sans-serif;
 $font-logo: "PalaceScriptMT", sans-serif;
+
+// ********************
+// Root CSS variables
+// ********************
+:root {
+  --color-main: #{$color-main};
+  --color-secondary: #{$color-secondary};
+}

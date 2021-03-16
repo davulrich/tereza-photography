@@ -25,11 +25,11 @@
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    background: hsla(0, 100%, 0%, 0.35);
+    background: rgba(var(--color-main), 0.35);
     @include transition15;
 
     .card-title {
-      color: $color-secondary;
+      color: var(--color-secondary);
       text-align: center;
       font-size: 2.5rem;
       @include transition15;

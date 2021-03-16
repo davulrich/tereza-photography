@@ -12,7 +12,7 @@
     align-items: center;
 
     a {
-      color: $color-main;
+      color: var(--color-main);
       font-family: $font-logo;
       font-size: 4rem;
     }
