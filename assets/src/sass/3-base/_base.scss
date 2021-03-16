@@ -23,6 +23,10 @@ h6 {
   color: var(--color-secondary);
 }
 
+body {
+  background-color: var(--color-main);
+}
+
 a {
   &:hover {
     text-decoration: none;
