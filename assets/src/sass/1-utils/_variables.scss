@@ -19,5 +19,7 @@ $font-logo: "PalaceScriptMT", sans-serif;
 // ********************
 :root {
   --color-main: #{$color-main};
+  --color-main-rgb: 0, 0, 0;
   --color-secondary: #{$color-secondary};
+  --color-secondary-rgb: 255, 255, 255;
 }
