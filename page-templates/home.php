@@ -13,7 +13,7 @@ get_header(); ?>
     <div class="intro__content-box">
         <h1 class="intro__heading"><?php echo esc_html( get_bloginfo('name') ); ?></h1>
 
-        <?php echo load_menu_on_home_page('primary'); ?>
+        <?php echo display_menu('primary'); ?>
     </div>
 
     <div class="intro__social">

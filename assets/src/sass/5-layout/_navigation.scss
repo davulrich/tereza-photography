@@ -1,0 +1,29 @@
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5rem;
+
+  font-size: 2rem;
+
+  &__link {
+    position: relative;
+    &::after {
+      content: "";
+      height: 1rem;
+      width: 100%;
+
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+
+      border-bottom: 1px solid;
+      opacity: 0;
+      transform: scaleX(0);
+      transition: all 0.35s ease-in-out;
+    }
+    &:hover::after {
+      opacity: 1;
+      transform: scaleX(1);
+    }
+  }
+}

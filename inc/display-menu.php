@@ -1,9 +1,9 @@
 <?php
 /**
- * Return menu on home page
+ * Display menu
  */
 
-function load_menu_on_home_page($name) {
+function display_menu($name) {
     $menu_name = $name;
 
     if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
@@ -11,12 +11,12 @@ function load_menu_on_home_page($name) {
     
         $menu_items = wp_get_nav_menu_items($menu->term_id);
     
-        $menu_list = '<ul class="intro__nav">';
+        $menu_list = '<ul class="navigation">';
     
         foreach ( (array) $menu_items as $key => $menu_item ) {
             $title = $menu_item->title;
             $url = $menu_item->url;
-            $menu_list .= '<li class="intro__nav-item"><a class="intro__nav-link" href="' . $url . '">' . $title . '</a></li>';
+            $menu_list .= '<li class="navigation__item"><a class="navigation__link" href="' . $url . '">' . $title . '</a></li>';
         }
         $menu_list .= '</ul>';
     } else {

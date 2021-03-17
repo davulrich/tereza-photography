@@ -34,40 +34,15 @@
     text-align: right;
   }
 
+  &__content-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 3rem;
+  }
+
   &__heading {
     font-size: 5rem;
-  }
-
-  &__nav {
-    margin-top: 3rem;
-
-    display: flex;
-    justify-content: flex-end;
-    gap: 5rem;
-
-    font-size: 2rem;
-  }
-
-  &__nav-link {
-    position: relative;
-    &::after {
-      content: "";
-      height: 1rem;
-      width: 100%;
-
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-
-      border-bottom: 1px solid;
-      opacity: 0;
-      transform: scaleX(0);
-      transition: all 0.35s ease-in-out;
-    }
-    &:hover::after {
-      opacity: 1;
-      transform: scaleX(1);
-    }
   }
 
   &__social-icon {
