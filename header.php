@@ -24,14 +24,12 @@
 
 	<!-- Hide header on Home page -->
 	<?php if ( !is_front_page() ) : ?>
-	<header id="masthead" class="navbar navbar-expand-md navbar-light">
-		<?php the_custom_logo(); ?>
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="site-branding navbar-brand d-none d-lg-inline-block"><?php bloginfo( 'name' ); ?></a>
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="site-branding navbar-brand d-inline-block d-lg-none"><?php echo 'TP'; ?></a>	
+	<header class="header">
 
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar-colapse" aria-controls="bs-navbar-colapse" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="header__logo">TP</a>	
+		<?php echo display_menu('primary'); ?>
+		<hr class="line">
+		
 	</header><!-- #masthead -->	
 	<?php endif; ?>
 
