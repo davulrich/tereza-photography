@@ -2,19 +2,29 @@
 // Footer styles
 // ********************
 
-.site-footer {
-  padding: 40px 15px;
-  background: $shadow;
+.footer {
+  padding: 3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 
-  .site-info {
+  &__info {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    align-content: flex-end;
+    gap: 0.5rem;
+  }
 
-    a {
-      color: var(--color-main);
-      font-family: $font-logo;
-      font-size: 4rem;
-    }
+  &__url,
+  &__copyright {
+    text-align: right;
+  }
+
+  &__url {
+    font-size: 2rem;
+  }
+
+  &__copyright {
+    font-size: 1.5rem;
   }
 }

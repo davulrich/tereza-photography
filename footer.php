@@ -15,15 +15,17 @@
 
 	<!-- Hide footer on Home page -->
 	<?php if ( !is_front_page() ) : ?>
-	<footer class="site-footer container-fluid">
-		<div class="row">
-			<div class="site-info col-sm-6 text-center">
-				<h4 class="mb-2 mb-sm-0"><a href="<?php echo esc_url( home_url( '/' ) );?>" class="brand"><?php bloginfo('name');?></a></h4>
-			</div>
-			<div class="site-info col-sm-6 text-center">
-				<p class="mb-2 mb-sm-0">Copyright © <?php echo the_time('Y') . ' ' . get_bloginfo('name');?></p>
-			</div>
+	<footer class="footer">
+		
+		<div class="footer__social">
+			<a class="intro__social-icon" href="https://instagram.com/terezpav" target="_blank"><?php echo file_get_contents(get_template_directory_uri() . '/assets/dist/img/icon-instagram.svg'); ?></a>
 		</div>
+
+		<div class="footer__info">
+			<span class="footer__url">terezaphotography.com</span>
+			<span class="footer__copyright"><?php echo esc_html( wp_date('Y') );?> &copy; <?php echo esc_html( bloginfo('name') ); ?></span>
+		</div>
+
 	</footer>
 	<?php endif; ?>
 
