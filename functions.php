@@ -148,3 +148,9 @@ require get_template_directory() . '/inc/custom-fields.php';
  * 
  */
 require get_template_directory() . '/inc/display-menu.php';
+
+/**
+ * Gallery API
+ * 
+ */
+require get_template_directory() . '/inc/display-gallery.php';
