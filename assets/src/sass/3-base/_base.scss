@@ -9,6 +9,14 @@
 html {
   font-size: 62.5%; // now 1rem = 10px
   scroll-behavior: smooth;
+
+  @include respond(tab-land) {
+    font-size: 56%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
 }
 
 body,
