@@ -27,7 +27,10 @@ function display_images_from_folder($folder_name) {
 
     // Build HTML output
     foreach ($img_ids as $id) {
-       $images_html .= '<img src="' . wp_get_attachment_image_src($id, 'medium')[0] . '">';
+       $images_html .=
+        '<a href="'. wp_get_attachment_image_src($id, 'large')[0] . '" data-fancybox="gallery" data-caption="Caption for single image">
+	        <img src="' . wp_get_attachment_image_src($id)[0] . '" alt="" />
+        </a>';
     }
 
     return $images_html;
@@ -55,7 +58,7 @@ function getApiData($call_type, $id = 0) {
         array(
             'headers'     => array(
                 'Content-Type' => 'application/json; charset=utf-8',
-                'Authorization' => 'Bearer M2nyCsd6N2lr477ZhDk7XrnBpkU2vdqwFsyw3wmg',
+                'Authorization' => 'Bearer ' . API_KEY_FILEBIRD,
             ),
         ),
     ));
