@@ -33,4 +33,4 @@
 	</header><!-- #masthead -->	
 	<?php endif; ?>
 
-	<main id="content" class="<?php echo !is_front_page() ? 'site-content' : 'intro'; ?>">
+	<main class="<?php echo !is_front_page() ? 'content' : 'intro'; ?>">
