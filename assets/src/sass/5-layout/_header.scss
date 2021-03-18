@@ -5,9 +5,7 @@
 .header {
   padding: 3rem;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include displayFlex($direction: column, $align-items: center);
 
   &__logo {
     font-family: $font-logo;

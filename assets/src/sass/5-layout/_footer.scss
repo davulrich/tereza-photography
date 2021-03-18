@@ -4,13 +4,11 @@
 
 .footer {
   padding: 3rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+
+  @include displayFlex($justify: space-around, $align-items: center);
 
   &__info {
-    display: flex;
-    flex-direction: column;
+    @include displayFlex($direction: column);
     align-content: flex-end;
     gap: 0.5rem;
   }

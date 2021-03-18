@@ -10,10 +10,11 @@
   background-repeat: no-repeat;
   background-size: contain;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
+  @include displayFlex(
+    $direction: column,
+    $justify: space-between,
+    $align-items: flex-end
+  );
 
   color: var(--color-secondary);
 
@@ -35,9 +36,7 @@
   }
 
   &__content-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    @include displayFlex($direction: column, $justify: flex-end);
     gap: 3rem;
   }
 
@@ -52,9 +51,7 @@
     border-radius: 50%;
     border: 2px solid var(--color-main);
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include displayFlex($justify: center, $align-items: center);
 
     box-shadow: none;
     transform: scale(0.9);
