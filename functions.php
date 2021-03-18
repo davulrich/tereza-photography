@@ -79,6 +79,14 @@ if ( ! function_exists( 'terezaphotography_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+
+		/**
+		 * Add and remove Image thumbail sizes
+		 * 
+		 */
+		remove_image_size('1536x1536');
+		remove_image_size('2048x2048');
+		remove_image_size('medium_large');
 	}
 endif;
 add_action( 'after_setup_theme', 'terezaphotography_setup' );
