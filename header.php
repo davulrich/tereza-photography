@@ -20,11 +20,11 @@
 	
 </head>
 
-<body <?php body_class(); ?>>
+<body class="<?php echo !is_front_page() ? 'grid' : 'home'; ?>">
 
 	<!-- Hide header on Home page -->
 	<?php if ( !is_front_page() ) : ?>
-	<header class="header">
+	<header class="header grid-center">
 
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="header__logo">TP</a>	
 		<?php echo display_menu('primary'); ?>
@@ -33,4 +33,4 @@
 	</header><!-- #masthead -->	
 	<?php endif; ?>
 
-	<main class="<?php echo !is_front_page() ? 'content' : 'intro'; ?>">
+	<main class="<?php echo !is_front_page() ? 'content grid-center' : 'intro'; ?>">

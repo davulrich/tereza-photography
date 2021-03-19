@@ -3,9 +3,9 @@
 // ********************
 
 .footer {
-  padding: 3rem;
+  padding-bottom: 3rem;
 
-  @include displayFlex($justify: space-around, $align-items: center);
+  @include displayFlex($justify: space-between, $align-items: center);
 
   &__info {
     @include displayFlex($direction: column);
@@ -24,5 +24,23 @@
 
   &__copyright {
     font-size: 1.5rem;
+  }
+
+  &__social-icon {
+    border-radius: 50%;
+    border: 2px solid var(--color-main);
+
+    display: inline-block;
+
+    box-shadow: none;
+    transform: scale(0.9);
+    transition: all 0.3s ease-in-out;
+
+    // fix  webkit lagged animation
+    backface-visibility: hidden;
+
+    svg {
+      fill: var(--color-secondary);
+    }
   }
 }

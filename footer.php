@@ -15,10 +15,10 @@
 
 	<!-- Hide footer on Home page -->
 	<?php if ( !is_front_page() ) : ?>
-	<footer class="footer">
+	<footer class="footer grid-center">
 		
 		<div class="footer__social">
-			<a class="intro__social-icon" href="https://instagram.com/terezpav" target="_blank"><?php echo file_get_contents(get_template_directory_uri() . '/assets/dist/img/icon-instagram.svg'); ?></a>
+			<a class="footer__social-icon" href="https://instagram.com/terezpav" target="_blank"><?php echo file_get_contents(get_template_directory_uri() . '/assets/dist/img/icon-instagram.svg'); ?></a>
 		</div>
 
 		<div class="footer__info">
