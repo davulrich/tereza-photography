@@ -28,7 +28,7 @@ function display_images_from_folder($folder_name) {
     // Build HTML output
     foreach ($img_ids as $id) {
        $images_html .=
-        '<a class="gallery__link" href="'. wp_get_attachment_image_src($id, 'large')[0] . '" data-fancybox="gallery">
+        '<a class="gallery__link" href="'. wp_get_attachment_image_src($id, 'full')[0] . '" data-fancybox="gallery">
 	        <img class="gallery__img" src="' . wp_get_attachment_image_src($id)[0] . '" alt="" />
         </a>';
     }
