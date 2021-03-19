@@ -23,15 +23,17 @@ function display_images_from_folder($folder_name) {
 
     // GET all images id in folder
     $img_ids = getApiData('folder', $folder_id);
-    $images_html = '';
+    $images_html = '<div class="gallery">';
 
     // Build HTML output
     foreach ($img_ids as $id) {
        $images_html .=
-        '<a href="'. wp_get_attachment_image_src($id, 'large')[0] . '" data-fancybox="gallery" data-caption="Caption for single image">
-	        <img src="' . wp_get_attachment_image_src($id)[0] . '" alt="" />
+        '<a class="gallery__link" href="'. wp_get_attachment_image_src($id, 'large')[0] . '" data-fancybox="gallery">
+	        <img class="gallery__img" src="' . wp_get_attachment_image_src($id)[0] . '" alt="" />
         </a>';
     }
+
+    $images_html .= '</div>';
 
     return $images_html;
 }
